@@ -8,7 +8,7 @@ function feltolt(db, tol, ig){
         tomb[i]=vel;
     }
     console.log(tomb);
-    document.getElementById("szoveg").innerHTML="A tomb elemei: "+tomb.join(",");
+    document.getElementById("szoveg").innerHTML="A tömb elemei: "+tomb.join(",");
 }
 // 1. Feladat
 function osszegzes(){        
@@ -16,27 +16,24 @@ function osszegzes(){
     for (var i = 0; i < tomb.length; i++) {
         osszeg += tomb[i];
     }
-    document.getElementById("osszeg").innerHTML = "Az elemek összege: " + osszeg;
+    document.getElementById("osszeg").innerHTML = "A tömb elemeinek összege: " + osszeg;
 }
 // 2. Feladat
 function paros() {
     var parosszam = 0;
-    for (var i = 0; i < tomb.length; i++){
-<<<<<<< HEAD
-        if (tomb[i]%2 === 0){
-=======
-        if (tomb[i]%2 === 0 && tomb[i] !== 0 ){
->>>>>>> 05f8308e6f820d0d0ef33adf106591512ee5feea
-            parosszam += 1;
+    for (var i = 0; i < tomb.length; i++) {
+        if (tomb[i] % 2 === 0) {
+            if (tomb[i] % 2 === 0 && tomb[i] !== 0) {
+                parosszam += 1;
+            }
         }
     }
-    document.getElementById("paros").innerHTML="Ennyi páros Szám van:" + parosszam;
+    document.getElementById("paros").innerHTML="Ennyi páros Szám van: " + parosszam;
 }
 // 3. Feladat
 function forditTomb() {
     var fTomb = [];
     var j = 0;
-    var iras = "";
     for (var i = (tomb.length-1); i > -1; i--) {
         fTomb[j] = tomb[i];
         j++;
@@ -52,7 +49,7 @@ function otteloszthato() {
             oszthat += 1;
         }
     }
-    document.getElementById("oszthato").innerHTML = "5-tel oszthatók száma: " + oszthat;
+    document.getElementById("oszthato").innerHTML = "Az 5-tel oszthatóak száma: " + oszthat;
 }
 // 5. Feladat
 function legNagyobb() {
@@ -62,7 +59,7 @@ function legNagyobb() {
             vel2 = tomb[i] ;
         }
     }
-    document.getElementById("legn").innerHTML = "A legnagyobb szám: " + vel2;
+    document.getElementById("legn").innerHTML = "A tömb legnagyobb száma: " + vel2;
 }
 // 6. Feladat
 function kettoHarom() {
@@ -80,12 +77,30 @@ function kettoHarom() {
         document.getElementById("kettoHaromOszt").innerHTML = "NINCS 2-vel és 3-al is osztható szám benne!";
     }
 }
-// 7. Feladat
+// 7. Feladat - 8. Feladat
 function negyzetSzam() {
+    var van = false;
+    var darabja = 0;
+    for (var i = 0; i < tomb.length; i++) {
+        if (Math.sqrt(tomb[i]) % 1 === 0 && !(tomb[i] === 1)) {
+            van = true;
+            darabja++;
+        }
+    }
+    if (van) {
+        document.getElementById("negyzetSz").innerHTML = "Igen, van négyzetszám az elemek között!";
+    } else {
+        document.getElementById("negyzetSz").innerHTML = "Nem, nincs négyzetszám az elemek között!";
+    }
+
+    document.getElementById("negyzetSzOssz").innerHTML = "Ennyi darab négyzetszám van a tömbünkben: " + darabja;
+}
+// 9. Feladat
+function primVanE() {
 
 }
-// 8. Feladat
-function negyzetOssz() {
+// 10. Feladat
+function primDarab() {
 
 }
 
@@ -108,7 +123,6 @@ function dolgozz() {
 
 function init() {
     console.log("Itt vagyok!");
-    document.getElementById("szoveg").innerHTML = "A JS dolgozik! ";
     document.getElementById("ok").addEventListener("click", dolgozz);
 }
 
