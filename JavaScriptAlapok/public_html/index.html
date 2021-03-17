@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
     <head>
@@ -8,25 +8,36 @@
     </head>
     <body>
         <main>
-            <header>
-                <h1>Javascrip alapok</h1>
-            </header>
-            <form>
-                <label for="adat">Adja meg az adatot: </label>
-                <input type="text" id="adat" name="adat"><br><br>
-                <input type="button" onclick="dolgozz()" id="ok" name="ok" value="ok"><br><br>
-            </form>
-            <article>
-                <p id="szoveg">
-                    Az eredmény:
-                </p>
-                <p id="osszeg">
-                    Az eredmény:
-                </p>
-                <p id="oszthato">
+        <header>
+            <h1>Javascrip alapok</h1>
+        </header>
+        <form>
+            <label for="adat">Adja meg az adatot: </label>
+            <input type="text" id="adat" name="adat"><br>
+            <label for="kezdo">Adja meg a kezdő számot: </label>
+            <input type="text" id="kezdo" name="kezdo"><br>
+            <label for="vegzo">Adja meg a végző számot: </label>
+            <input type="text" id="vegzo" name="vegzo"><br>
+            <br>
+            <input type="button" onclick="dolgozz()" id="ok" name="ok" value="ok"><br><br>
+        </form>
+        <article>
+            <p id="szoveg">
+                Az eredmény:
+            </p>
+            <p id="osszeg">
+                Az eredmény:
+            </p>
+            <p id="forditottTomb">
+                Az eredmény:
+            </p>
+            <p id="kettoHaromOszt">
+                Az eredmény:
+            </p>
+            <p id="oszthato">
                     5-tel oszthatóak száma:
-                </p>               
-            </article>
+            </p> 
+        </article>
         </main>
         <script src="javaAlapok.js" type="text/javascript"></script>
     </body>
