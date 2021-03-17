@@ -18,6 +18,10 @@ function osszegzes(){
     }
     document.getElementById("osszeg").innerHTML = "Az elemek összege: " + osszeg;
 }
+// 2. Feladat
+function paros() {
+
+}
 // 3. Feladat
 function forditTomb() {
     var fTomb = [];
@@ -39,6 +43,10 @@ function otteloszthato() {
     }
     document.getElementById("oszthato").innerHTML = "5-tel oszthatók száma: " + oszthat;
 }
+// 5. Feladat
+function legNagyobb() {
+
+}
 // 6. Feladat
 function kettoHarom() {
     var vane = false;
@@ -57,6 +65,10 @@ function kettoHarom() {
 }
 // 7. Feladat
 function negyzetSzam() {
+
+}
+// 8. Feladat
+function negyzetOssz() {
 
 }
 
