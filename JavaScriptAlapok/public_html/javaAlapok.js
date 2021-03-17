@@ -1,11 +1,11 @@
 var tomb=[];
 
-function feltolt(db){
-    tomb=[];
-    
+function feltolt(db, tol, ig){
+    tomb = [];
+    var intervall = ig - parseInt(tol);
     for (var i = 0; i < db; i++) {
-        var vel=Math.floor(Math.random()*10+1);
-        tomb[i]=vel;
+        var vel = Math.floor(Math.random() * intervall) + parseInt(tol);
+            tomb[i]=vel;
         }
         console.log(tomb);
         document.getElementById("szoveg").innerHTML="A tomb elemei: "+tomb.join(";");
@@ -22,8 +22,10 @@ function dolgozz(){
 
     //alert("Jó reggelt!");
     //document.write("Hello");
-    var adat=document.getElementById("adat").value;
-    feltolt(adat);
+    var adat = document.getElementById("adat").value;
+    var kezdo = document.getElementById("kezdo").value;
+    var vegzo = parseInt(document.getElementById("vegzo").value) + 1;
+    feltolt(adat, kezdo, vegzo);
     osszegzes();
     
 //    tomb[0]=2;
