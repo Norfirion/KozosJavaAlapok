@@ -5,10 +5,10 @@ function feltolt(db, tol, ig){
     var intervall = ig - parseInt(tol);
     for (var i = 0; i < db; i++) {
         var vel = Math.floor(Math.random() * intervall) + parseInt(tol);
-            tomb[i]=vel;
-        }
-        console.log(tomb);
-        document.getElementById("szoveg").innerHTML="A tomb elemei: "+tomb.join(";");
+        tomb[i]=vel;
+    }
+    console.log(tomb);
+    document.getElementById("szoveg").innerHTML="A tomb elemei: "+tomb.join(";");
 }        
 function osszegzes(){        
     var osszeg=0;
@@ -16,6 +16,16 @@ function osszegzes(){
         osszeg+=tomb[i];
     }
     document.getElementById("osszeg").innerHTML="Az elemek összege: " + osszeg;
+}
+function forditTomb() {
+    var fTomb = [];
+    var j = 0;
+    for (var i = tomb.length; i > -1; i--) {
+        fTomb[j] = tomb[i];
+        j++;
+    }
+    console.log(fTomb);
+    document.getElementById("forditottTomb").innerHTML="A tömb elemei fordítva: "+fTomb.join(";");
 }
 
 function dolgozz(){
@@ -25,8 +35,10 @@ function dolgozz(){
     var adat = document.getElementById("adat").value;
     var kezdo = document.getElementById("kezdo").value;
     var vegzo = parseInt(document.getElementById("vegzo").value) + 1;
+
     feltolt(adat, kezdo, vegzo);
     osszegzes();
+    forditTomb();
     
 //    tomb[0]=2;
 //    tomb[1]="Kismacska";
