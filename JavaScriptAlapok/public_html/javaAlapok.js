@@ -9,7 +9,8 @@ function feltolt(db, tol, ig){
     }
     console.log(tomb);
     document.getElementById("szoveg").innerHTML="A tomb elemei: "+tomb.join(";");
-}        
+}
+// 1. Feladat
 function osszegzes(){        
     var osszeg=0;
     for (var i = 0; i < tomb.length; i++) {
@@ -17,6 +18,7 @@ function osszegzes(){
     }
     document.getElementById("osszeg").innerHTML = "Az elemek összege: " + osszeg;
 }
+// 3. Feladat
 function forditTomb() {
     var fTomb = [];
     var j = 0;
@@ -27,6 +29,7 @@ function forditTomb() {
     console.log(fTomb);
     document.getElementById("forditottTomb").innerHTML="A tömb elemei fordítva: "+fTomb.join(";");
 }
+// 6. Feladat
 function kettoHarom() {
     var vane = false;
     for (var i = 0; i < tomb.length; i++) {
@@ -42,7 +45,10 @@ function kettoHarom() {
         document.getElementById("kettoHaromOszt").innerHTML = "NINCS 2-vel és 3-al is osztható szám benne!";
     }
 }
+// 7. Feladat
+function negyzetSzam() {
 
+}
 
 function otteloszthato() {
     var oszthat = 0;
@@ -68,6 +74,7 @@ function dolgozz() {
     forditTomb();
     kettoHarom();
     otteloszthato();
+    negyzetSzam();
 
 //    tomb[0]=2;
 //    tomb[1]="Kismacska";
