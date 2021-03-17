@@ -45,6 +45,13 @@ function otteloszthato() {
 }
 // 5. Feladat
 function legNagyobb() {
+    var vel2 =0;
+    for (var i = 0; i < tomb.length; i++) {
+        if(tomb[i]>vel2){
+            vel2 = tomb[i] ;
+        }
+    }
+    document.getElementById("legn").innerHTML = "A legnagyobb szám: " + vel2;
 
 }
 // 6. Feladat
@@ -88,6 +95,7 @@ function dolgozz() {
     kettoHarom();
     otteloszthato();
     negyzetSzam();
+    legNagyobb();
 
 //    tomb[0]=2;
 //    tomb[1]="Kismacska";
