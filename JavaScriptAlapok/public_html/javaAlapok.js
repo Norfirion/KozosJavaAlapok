@@ -22,7 +22,11 @@ function osszegzes(){
 function paros() {
     var parosszam = 0;
     for (var i = 0; i < tomb.length; i++){
+<<<<<<< HEAD
         if (tomb[i]%2 === 0){
+=======
+        if (tomb[i]%2 === 0 && tomb[i] !== 0 ){
+>>>>>>> 05f8308e6f820d0d0ef33adf106591512ee5feea
             parosszam += 1;
         }
     }
