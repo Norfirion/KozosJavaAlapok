@@ -21,8 +21,8 @@ function osszegzes(){
 // 2. Feladat
 function paros() {
     var parosszam = 0;
-    for (var i = 0; tomb.length; i++){
-        if (tomb[i]%2 === 0){
+    for (var i = 0; i < tomb.length; i++){
+        if (tomb[i]%2 === 0 && tomb[i] !== 0 ){
             parosszam += 1;
         }
     }
