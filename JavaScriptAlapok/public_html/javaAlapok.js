@@ -27,6 +27,22 @@ function forditTomb() {
     console.log(fTomb);
     document.getElementById("forditottTomb").innerHTML="A tömb elemei fordítva: "+fTomb.join(";");
 }
+function kettoHarom() {
+    var vane = false;
+    for (var i = 0; i < tomb.length; i++) {
+        if (tomb[i] % 3 == 0) {
+            if (tomb[i] % 2 == 0) {
+                vane = true;
+            }
+        }
+    }
+    if (vane) {
+        document.getElementById("kettoHaromOszt").innerHTML = "VAN 2-vel és 3-al is osztható szám benne!";
+    } else {
+        document.getElementById("kettoHaromOszt").innerHTML = "NINCS 2-vel és 3-al is osztható szám benne!";
+    }
+}
+
 
 function dolgozz(){
 
@@ -39,7 +55,8 @@ function dolgozz(){
     feltolt(adat, kezdo, vegzo);
     osszegzes();
     forditTomb();
-    
+    kettoHarom();
+
 //    tomb[0]=2;
 //    tomb[1]="Kismacska";
 //    tomb[2]=false;
