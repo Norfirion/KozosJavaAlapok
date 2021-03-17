@@ -8,7 +8,7 @@ function feltolt(db, tol, ig){
         tomb[i]=vel;
     }
     console.log(tomb);
-    document.getElementById("szoveg").innerHTML="A tomb elemei: "+tomb.join(";");
+    document.getElementById("szoveg").innerHTML="A tomb elemei: "+tomb.join(",");
 }
 // 1. Feladat
 function osszegzes(){        
@@ -21,24 +21,24 @@ function osszegzes(){
 // 2. Feladat
 function paros() {
     var parosszam = 0;
-    for (var i = 0; tomb.length; i++){
+    for (var i = 0; i < tomb.length; i++){
         if (tomb[i]%2 === 0){
             parosszam += 1;
         }
     }
     document.getElementById("paros").innerHTML="Ennyi páros Szám van:" + parosszam;
-
 }
 // 3. Feladat
 function forditTomb() {
     var fTomb = [];
     var j = 0;
-    for (var i = tomb.length; i > -1; i--) {
+    var iras = "";
+    for (var i = (tomb.length-1); i > -1; i--) {
         fTomb[j] = tomb[i];
         j++;
     }
     console.log(fTomb);
-    document.getElementById("forditottTomb").innerHTML="A tömb elemei fordítva: "+fTomb.join(";");
+    document.getElementById("forditottTomb").innerHTML = "A tömb elemei fordítva: " + fTomb.join(",");
 }
 // 4. Feladat
 function otteloszthato() {
