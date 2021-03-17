@@ -29,6 +29,16 @@ function forditTomb() {
     console.log(fTomb);
     document.getElementById("forditottTomb").innerHTML="A tömb elemei fordítva: "+fTomb.join(";");
 }
+// 4. Feladat
+function otteloszthato() {
+    var oszthat = 0;
+    for (var i = 0; i < tomb.length; i++) {
+        if (tomb[i] % 5 === 0) {
+            oszthat += 1;
+        }
+    }
+    document.getElementById("oszthato").innerHTML = "5-tel oszthatók száma: " + oszthat;
+}
 // 6. Feladat
 function kettoHarom() {
     var vane = false;
@@ -50,15 +60,6 @@ function negyzetSzam() {
 
 }
 
-function otteloszthato() {
-    var oszthat = 0;
-    for (var i = 0; i < tomb.length; i++) {
-        if (tomb[i] % 5 === 0) {
-            oszthat += 1;
-        }
-    }
-    document.getElementById("oszthato").innerHTML = "5-tel oszthatók száma: " + oszthat;
-}
 
 function dolgozz() {
 
