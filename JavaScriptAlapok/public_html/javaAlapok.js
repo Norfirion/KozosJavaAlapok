@@ -52,7 +52,6 @@ function legNagyobb() {
         }
     }
     document.getElementById("legn").innerHTML = "A legnagyobb szám: " + vel2;
-
 }
 // 6. Feladat
 function kettoHarom() {
@@ -81,9 +80,6 @@ function negyzetOssz() {
 
 
 function dolgozz() {
-
-    //alert("Jó reggelt!");
-    //document.write("Hello");
     var adat = document.getElementById("adat").value;
 
     var kezdo = document.getElementById("kezdo").value;
@@ -96,13 +92,6 @@ function dolgozz() {
     otteloszthato();
     negyzetSzam();
     legNagyobb();
-
-//    tomb[0]=2;
-//    tomb[1]="Kismacska";
-//    tomb[2]=false;
-//    tomb[3]=5.4;
-//    var tomb = new Arrey(34);
-
 }
 
 function init() {
