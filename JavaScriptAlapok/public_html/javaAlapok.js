@@ -20,6 +20,13 @@ function osszegzes(){
 }
 // 2. Feladat
 function paros() {
+    var parosszam = 0;
+    for (var i = 0; tomb.length; i++){
+        if (tomb[i]%2 === 0){
+            parosszam += 1;
+        }
+    }
+    document.getElementById("paros").innerHTML="Ennyi páros Szám van:" + parosszam;
 
 }
 // 3. Feladat
@@ -92,6 +99,7 @@ function dolgozz() {
     otteloszthato();
     negyzetSzam();
     legNagyobb();
+    paros();
 }
 
 function init() {
